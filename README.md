@@ -1,9 +1,6 @@
 Link to Medium Article: https://medium.com/@sriharimalapati/building-a-scalable-3-tier-architecture-on-aws-using-terraform-a-modular-approach-5117378789f0
 
-Here is the Markdown content transcribed from the image:
-
----
-
+## Steps
 * **In the AWS Console:**
     1. Go to **IAM** $\rightarrow$ **Users** $\rightarrow$ **Create user**
     2. Enter a username (e.g., `terraform-user`)
