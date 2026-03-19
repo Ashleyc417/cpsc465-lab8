@@ -70,7 +70,7 @@ terraform apply -auto-approve
   - VPC
   - EC2 instances
   - Application Load Balancer (ALB)
-  - Auto Scalaing Group
+  - Auto Scaling Group
   - RDS
 
 ### 5. Destroy Infrastructure
