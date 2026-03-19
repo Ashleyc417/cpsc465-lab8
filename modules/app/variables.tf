@@ -1,30 +1,31 @@
-resource "aws_lb" "app" {
-  name               = "app-alb"
-  internal           = true
-  load_balancer_type = "application"
-  security_groups    = [var.app_alb_sg_id]
-  subnets            = var.private_subnet_ids
+variable "private_subnet_ids" {
+  description = "List of private subnet IDs for the App ALB and ASG"
+  type        = list(string)
 }
 
-resource "aws_launch_template" "app" {
-  name_prefix   = "app-"
-  image_id      = var.app_ami
-  instance_type = var.app_instance_type
-  key_name      = var.key_name
-
-  network_interfaces {
-    security_groups = [var.app_instance_sg_id]
-  }
+variable "app_alb_sg_id" {
+  description = "Security group ID for the App ALB"
+  type        = string
 }
 
-resource "aws_autoscaling_group" "app" {
-  desired_capacity   = 2
-  max_size           = 4
-  min_size           = 2
-  vpc_zone_identifier = var.private_subnet_ids
+variable "app_instance_sg_id" {
+  description = "Security group ID for the App EC2 instances"
+  type        = string
+}
 
-  launch_template {
-    id      = aws_launch_template.app.id
-    version = "$Latest"
-  }
+variable "app_ami" {
+  description = "AMI ID for the app server"
+  type        = string
+}
+
+variable "app_instance_type" {
+  description = "EC2 instance type for app server"
+  type        = string
+  default     = "t2.micro"
+}
+
+variable "key_name" {
+  description = "SSH key pair name"
+  type        = string
+  default     = "my-key"
 }
