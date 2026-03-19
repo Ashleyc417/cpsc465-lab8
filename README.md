@@ -67,11 +67,11 @@ terraform apply -auto-approve
 
 * Check AWS Console for created resources.
 * Validate the following:
-        - VPC
-        - EC2 instances
-        - Application Load Balancer (ALB)
-        - Auto Scalaing Grouop
-        - RDS
+  - VPC
+  - EC2 instances
+  - Application Load Balancer (ALB)
+  - Auto Scalaing Group
+  - RDS
 
 ### 5. Destroy Infrastructure
 
