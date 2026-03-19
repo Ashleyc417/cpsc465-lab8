@@ -1,7 +1,10 @@
 Link to Medium Article: https://medium.com/@sriharimalapati/building-a-scalable-3-tier-architecture-on-aws-using-terraform-a-modular-approach-5117378789f0
 
+## Steps:
+Clone the repo
 
-* **In the AWS Console:**
+
+**In the AWS Console:**
     1. Go to **IAM** $\rightarrow$ **Users** $\rightarrow$ **Create user**
     2. Enter a username (e.g., `terraform-user`)
     3. On the permissions page, select **Attach policies directly**
