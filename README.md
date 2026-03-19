@@ -3,6 +3,9 @@ Link to Medium Article: https://medium.com/@sriharimalapati/building-a-scalable-
 ## Steps:
 Clone the repo
 
+### Run the commands:
+`terraform init`
+`terraform plan`
 
 **In the AWS Console:**
     1. Go to **IAM** $\rightarrow$ **Users** $\rightarrow$ **Create user**
