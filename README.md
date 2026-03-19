@@ -3,10 +3,6 @@ Link to Medium Article: https://medium.com/@sriharimalapati/building-a-scalable-
 ## Steps:
 Clone the repo
 
-### Run the commands:
-`terraform init`
-`terraform plan`
-
 **In the AWS Console:**
     1. Go to **IAM** $\rightarrow$ **Users** $\rightarrow$ **Create user**
     2. Enter a username (e.g., `terraform-user`)
@@ -43,4 +39,44 @@ Enter when prompted:
 
 `aws sts get-caller-identity`
 
-You should see your account ID and user ARN. Then run `terraform plan`.
+You should see your account ID and user ARN.
+
+
+### Run the commands:
+## Deployment Steps
+
+### 1. Initialize Terraform
+
+```bash
+terraform init
+```
+
+### 2. Plan the Deployment
+
+```bash
+terraform plan
+```
+
+### 3. Apply the Configuration
+
+```bash
+terraform apply -auto-approve
+```
+
+### 4. Verify the Deployment
+
+* Check AWS Console for created resources.
+* Validate the following:
+- VPC
+- EC2 instances
+- Application Load Balancer (ALB)
+- Auto Scalaing Grouop
+- RDS
+
+### 5. Destroy Infrastructure
+
+```bash
+terraform destroy -auto-approve
+```
+
+
